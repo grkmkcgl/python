@@ -1,7 +1,6 @@
 import random
 
 # will add functions in future to simplify code
-# change win status with str
 
 possible_inputs = ["1", "2", "3"]
 items = ['rock', 'paper', 'scissors']
