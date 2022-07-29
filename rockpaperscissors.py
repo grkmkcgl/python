@@ -1,16 +1,18 @@
 import random
 
 # will add functions in future to simplify code
+# change win status with str
 
-possible_inputs = ["1" , "2", "3"]
+possible_inputs = ["1", "2", "3"]
 items = ['rock', 'paper', 'scissors']
 
 while 1:
     computer_choice = random.choice(items)
-    user_input = input("what is your hand? Write 1 for rock 2 for paper 3 for scissors ")
+    user_input = input("1 for rock 2 for paper 3 for scissors ")
 
     while user_input not in possible_inputs:
         user_input = input("please enter valid input!")
+
     if user_input == "1":
         user_input = "rock"
     elif user_input == "2":
@@ -21,35 +23,53 @@ while 1:
     while not computer_choice == user_input:
         if computer_choice == "rock":
             if user_input == "paper":
-                print("player wins!")
+                print("Your choice: " + user_input)
+                print("Computer selected: " + computer_choice)
+                print("You win!")
                 break
             elif user_input == "scissors":
-                print("computer wins!")
+                print("Your choice: " + user_input)
+                print("Computer selected: " + computer_choice)
+                print("Computer win!")
                 break
 
         if computer_choice == "paper":
             if user_input == "rock":
-                print("computer wins!")
+                print("Your choice: " + user_input)
+                print("Computer selected: " + computer_choice)
+                print("Computer win!")
                 break
             elif user_input == "scissors":
-                print("player wins!")
+                print("Your choice: " + user_input)
+                print("Computer selected: " + computer_choice)
+                print("You win!")
                 break
 
         if computer_choice == "scissors":
             if user_input == "rock":
-                print("player wins!")
+                print("Your choice: " + user_input)
+                print("Computer selected: " + computer_choice)
+                print("You win!")
                 break
             if user_input == "paper":
-                print("computer wins!")
+                print("Your choice: " + user_input)
+                print("Computer selected: " + computer_choice)
+                print("Computer win!")
                 break
 
-
     while user_input == computer_choice:
-        print("WITHDRAW AGAIN!")
+        print("Your choice: " + user_input)
+        print("Computer selected: " + computer_choice)
+        print("TIE! AGAIN!")
+        print(" ")
+
+        #computer reselects
         computer_choice = random.choice(items)
-        user_input = input("what is your hand? Write 1 for rock 2 for paper 3 for scissors ")
+        user_input = input("1 for rock 2 for paper 3 for scissors ")
+
         while user_input not in possible_inputs:
             user_input = input("please enter valid input!")
+
         if user_input == "1":
             user_input = "rock"
         elif user_input == "2":
@@ -59,33 +79,45 @@ while 1:
 
         if computer_choice == "rock":
             if user_input == "paper":
-                print("player wins!")
+                print("Your choice: " + user_input)
+                print("Computer selected: " + computer_choice)
+                print("You win!")
                 break
             elif user_input == "scissors":
-                print("computer wins!")
+                print("Your choice: " + user_input)
+                print("Computer selected: " + computer_choice)
+                print("Computer win!")
                 break
 
         if computer_choice == "paper":
             if user_input == "rock":
-                print("computer wins!")
+                print("Your choice: " + user_input)
+                print("Computer selected: " + computer_choice)
+                print("Computer win!")
                 break
             elif user_input == "scissors":
-                print("player wins!")
+                print("Your choice: " + user_input)
+                print("Computer selected: " + computer_choice)
+                print("You win!")
                 break
 
         if computer_choice == "scissors":
             if user_input == "rock":
-                print("player wins!")
+                print("Your choice: " + user_input)
+                print("Computer selected: " + computer_choice)
+                print("You win!")
                 break
             if user_input == "paper":
-                print("computer wins!")
+                print("Your choice: " + user_input)
+                print("Computer selected: " + computer_choice)
+                print("Computer win!")
                 break
         continue
 
-
-    user_input = input("Do you want to play again Y/N? ")
-    if user_input == "Y" or user_input == "y" or user_input == "1":
+    print(" ")
+    user_input = input("Do you want to play again Y/N? ").lower()
+    if user_input == "y" or user_input == "1":
+        print(" ")
         continue
     else:
         break
-
